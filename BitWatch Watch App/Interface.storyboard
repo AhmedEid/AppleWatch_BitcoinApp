@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitWatch_Watch_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="$0.00" textAlignment="center" id="PoO-aY-B8a">
+                            <fontDescription key="font" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                        </label>
+                        <group width="1" alignment="center" hasDetent="YES" id="dcD-rG-WVV">
+                            <items>
+                                <imageView width="32" height="32" alignment="center" verticalAlignment="center" id="urs-it-xaG"/>
+                                <label alignment="center" verticalAlignment="center" text="1 BTC" id="BMd-rq-zYn">
+                                    <fontDescription key="font" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="Last Updated" textAlignment="center" id="lOr-0L-QIt">
+                            <fontDescription key="font" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Resfresh" id="R9j-Ef-Deu">
+                            <fontDescription key="font" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                            <connections>
+                                <action selector="refreshTapped" destination="AgC-eL-Hgc" id="KJw-6C-PgW"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="urs-it-xaG" id="qDa-cA-oXe"/>
+                        <outlet property="lastUpdatedLabel" destination="lOr-0L-QIt" id="KJa-3h-Veq"/>
+                        <outlet property="priceLabel" destination="PoO-aY-B8a" id="gvn-Qf-laq"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
